@@ -1,7 +1,8 @@
 from __future__ import annotations
 from pydantic import BaseModel
 from UPS_SDK.models.Address import Address
+from typing import Optional
 
 class Shipper(BaseModel):
     ShipperNumber: str
-    Address: Address
+    Address: Optional[Address]
