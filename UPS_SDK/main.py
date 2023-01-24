@@ -2,7 +2,7 @@ import requests, urllib3, xmltodict, json
 from httpx import AsyncClient
 from dataclasses import dataclass
 from xml.etree import ElementTree
-from UPS_SDK.models import AccessRequest, TrackRequest, TrackResponse, TrackError
+from ups_sdk.models import AccessRequest, TrackRequest, TrackResponse, TrackError
 urllib3.disable_warnings()
 
 @dataclass

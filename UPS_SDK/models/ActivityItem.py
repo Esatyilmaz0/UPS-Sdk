@@ -2,9 +2,9 @@ from __future__ import annotations
 import datetime
 from typing import Optional
 from pydantic import BaseModel
-from UPS_SDK.models.ActivityLocation import ActivityLocation
-from UPS_SDK.models.Status import Status
-from UPS_SDK.models.Address import Address
+from .ActivityLocation import ActivityLocation
+from .Status import Status
+from .Address import Address
 
 class ActivityItem(BaseModel):
     ActivityLocation: Optional[ActivityLocation]

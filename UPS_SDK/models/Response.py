@@ -1,6 +1,6 @@
 from __future__ import annotations
 from pydantic import BaseModel
-from UPS_SDK.models.TransactionReference import TransactionReference
+from .TransactionReference import TransactionReference
 
 class Response(BaseModel):
     TransactionReference: TransactionReference

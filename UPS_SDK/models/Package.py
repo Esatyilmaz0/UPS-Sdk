@@ -1,9 +1,9 @@
 from __future__ import annotations
 from pydantic import BaseModel, Field
-from UPS_SDK.models.ActivityItem import ActivityItem
-from UPS_SDK.models.Message import Message
-from UPS_SDK.models.PackageWeight import PackageWeight
-from UPS_SDK.models.ReferenceNumber import ReferenceNumber
+from .ActivityItem import ActivityItem
+from .Message import Message
+from .PackageWeight import PackageWeight
+from .ReferenceNumber import ReferenceNumber
 from typing import List, Optional
 
 class Package(BaseModel):
