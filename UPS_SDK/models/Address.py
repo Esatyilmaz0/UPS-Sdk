@@ -5,6 +5,6 @@ from typing import Optional
 class Address(BaseModel):
     City: Optional[str] = None
     StateProvinceCode: Optional[str] = None
-    CountryCode: str
+    CountryCode: Optional[str] = None
     PostalCode: Optional[str] = None
     AddressLine1: Optional[str] = None
