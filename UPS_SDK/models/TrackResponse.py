@@ -20,9 +20,11 @@ class TrackResponse(BaseModel):
                 shipment["Package"]["Activity"] = [shipment["Package"]["Activity"]]
             
             redirect_or_alternate_tracking_number = package.get("Redirect") or package.get("AlternateTrackingNumber")
+            reference_number = shipment.get("ReferenceNumber")
             if redirect_or_alternate_tracking_number is None:
-                
-                if isinstance(shipment["ReferenceNumber"], dict):
+                if isinstance(reference_number, dict):
                     shipment["ReferenceNumber"] = [shipment["ReferenceNumber"]]
-            
+                    
+            if isinstance(reference_number, dict):
+                shipment["ReferenceNumber"] = [shipment["ReferenceNumber"]]
         super().__init__(**data)
